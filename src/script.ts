@@ -1,3 +1,6 @@
+/*
+````````` Basic Type ````````
+
 let playerName = "Mashrafi";
 console.log(playerName)
 
@@ -30,3 +33,53 @@ let person = {
 person.age = 20;
 console.log(person)
 
+*/
+
+
+
+// Explicit Type
+
+// Variable
+let a: string;
+// a = 23 // it got error
+a = "Majharul islam";
+console.log(a);
+// this variable can be string or number
+let b: string | number; /* Union Type */
+b = 23;
+b = "majharul"
+
+// Array
+
+let person: string[];
+person = ["jodu", "modu", "kola"];
+console.log(person)
+
+// if array need more type
+let newArr: (string | number)[]; /* Union Type */
+newArr = ["Majharul", 12];
+newArr.push(2, "islam")
+console.log(newArr)
+console.log(newArr.length)
+
+//Object
+
+//normall declare object without specefic type
+let obj: object;
+obj = {
+    name: "majharul",
+    age: 23,
+}
+
+//with specefic type
+let object: {
+    name: string,
+    age: number,
+    adult: boolean,
+}
+
+object = {
+    name : "Majharul",
+    age: 23,
+    adult: false,
+}
